@@ -2,6 +2,9 @@
 
 A simple, fast, and fun numbers game: click bubbles that match the target number to score points before the timer runs out.
 
+## Preview
+![Bubble Match Screenshot](./screenshot.png)
+
 ## Features
 - Start screen with a classical card UI
 - Timer countdown (60 seconds)
