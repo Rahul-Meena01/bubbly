@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bubble Match Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="start-screen" class="fade-in">
+        <div class="start-card">
+            <h1>Bubble Match</h1>
+            <p class="subtitle">Sharpen your eyes. Match the target. Beat the clock.</p>
+            <button id="start-btn">Start Game</button>
+        </div>
+    </div>
+
+    <main id="main">
+        <section id="panel">
+            <header id="ptop">
+                <div class="elem">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                    </svg>
+                    <h2>Target</h2>
+                    <div id="hitval" class="box">0</div>
+                </div>
+                <div class="elem">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    <h2>Timer</h2>
+                    <div id="timerval" class="box">60</div>
+                </div>
+                <div class="elem">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 20h9" />
+                    </svg>
+                    <h2>Score</h2>
+                    <div id="scoreval" class="box">0</div>
+                </div>
+                <div class="elem">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2l3 7h7l-5.5 4.5L17 21l-5-3-5 3 1.5-7.5L2 9h7z" />
+                    </svg>
+                    <h2>Best</h2>
+                    <div id="bestscoreval" class="box">0</div>
+                </div>
+            </header>
+            <section id="pbtm"></section>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
