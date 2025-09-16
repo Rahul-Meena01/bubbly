@@ -4,58 +4,61 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bubble Match Game</title>
+    <title>Bubble Match Game - Number Matching Challenge</title>
+    <meta name="description"
+        content="A fast-paced number matching game where you click bubbles to match the target number before time runs out." />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <div id="start-screen" class="fade-in">
+    <div id="start-screen" class="fade-in" role="dialog" aria-labelledby="game-title"
+        aria-describedby="game-description">
         <div class="start-card">
-            <h1>Bubble Match</h1>
-            <p class="subtitle">Sharpen your eyes. Match the target. Beat the clock.</p>
-            <button id="start-btn">Start Game</button>
+            <h1 id="game-title">Bubble Match</h1>
+            <p id="game-description" class="subtitle">Sharpen your eyes. Match the target. Beat the clock.</p>
+            <button id="start-btn" aria-describedby="game-description">Start Game</button>
         </div>
     </div>
 
-    <main id="main">
+    <main id="main" role="main" aria-label="Bubble Match Game">
         <section id="panel">
-            <header id="ptop">
+            <header id="ptop" role="banner" aria-label="Game Statistics">
                 <div class="elem">
                     <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <circle cx="12" cy="12" r="10" />
                     </svg>
                     <h2>Target</h2>
-                    <div id="hitval" class="box">0</div>
+                    <div id="hitval" class="box" role="status" aria-label="Target number to match">0</div>
                 </div>
                 <div class="elem">
                     <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <circle cx="12" cy="12" r="10" />
                         <polyline points="12 6 12 12 16 14" />
                     </svg>
                     <h2>Timer</h2>
-                    <div id="timerval" class="box">60</div>
+                    <div id="timerval" class="box" role="timer" aria-label="Time remaining in seconds">60</div>
                 </div>
                 <div class="elem">
                     <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path d="M12 20h9" />
                     </svg>
                     <h2>Score</h2>
-                    <div id="scoreval" class="box">0</div>
+                    <div id="scoreval" class="box" role="status" aria-label="Current score">0</div>
                 </div>
                 <div class="elem">
                     <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path d="M12 2l3 7h7l-5.5 4.5L17 21l-5-3-5 3 1.5-7.5L2 9h7z" />
                     </svg>
                     <h2>Best</h2>
-                    <div id="bestscoreval" class="box">0</div>
+                    <div id="bestscoreval" class="box" role="status" aria-label="Best score achieved">0</div>
                 </div>
             </header>
-            <section id="pbtm"></section>
+            <section id="pbtm" role="region" aria-label="Game bubbles area" aria-live="polite"></section>
         </section>
     </main>
     <script src="script.js"></script>
